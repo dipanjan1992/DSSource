@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Data Science</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1 class="comfort">Data Science Materials</h1>
+    </div>
+    <div class="linkref">
+      <li class="links"><a href="#heading">Lists of Apps to install</a></li>
+
+      <li class="links"><a href="#heading">Lists of Apps to install</a></li>
+
+      <li class="links"><a href="#heading">Lists of Apps to install</a></li>
+    </div>
+    <div class="maincontent">
+      <h4>What is Multicollinearity</h4>
+      <p>
+        Multicollinearity occurs when two or more independent variables in a
+        regression model are highly correlated with each other. This means that
+        they share a lot of information, and it becomes difficult to isolate the
+        individual effect of each variable on the dependent variable.
+      </p>
+      <h4>How does VIF work?</h4>
+      <p>
+        The VIF score for a particular independent variable is calculated by
+        regressing that variable on all the other independent variables in the
+        model. The VIF score is then equal to the reciprocal of 1 minus the
+        R-squared value of this regression. In simpler terms, it tells you how
+        much the variance of the coefficient estimate for that variable is
+        inflated due to multicollinearity.
+        <b>Higher VIF scores indicate a greater degree of multicollinearity</b>.
+        While there is no universally accepted threshold for what constitutes a
+        "high" VIF score, a common rule of thumb is that values above 5 or 10
+        suggest potential problems.
+      </p>
+      <h4>Why is VIF important?</h4>
+      <p>
+        Multicollinearity can lead to several problems in regression analysis,
+        including:
+      </p>
+      <ul>
+        <li>
+          <b>Inaccurate coefficient estimates:</b> The coefficients of the
+          independent variables may be biased and unreliable, making it
+          difficult to interpret their meaning.
+        </li>
+        <li>
+          <b>Increased standard errors:</b> The standard errors of the
+          coefficients will be inflated, making it harder to assess the
+          statistical significance of the results.
+        </li>
+        <li>
+          <b>Unstable model:</b> The model may be unstable and change
+          significantly with small changes in the data.
+        </li>
+      </ul>
+      <p>
+        By using VIF scores, you can identify variables that are contributing to
+        multicollinearity and take steps to address the issue. This may involve
+        removing highly correlated variables from the model, combining them into
+        a single variable, or collecting additional data.
+      </p>
+      <h4>What are the assumptions of Linear Regression?</h4>
+      <p>
+        Linear regression, though a powerful tool, relies on several key
+        assumptions to ensure its validity and reliability. These assumptions
+        essentially dictate the conditions under which the model produces
+        accurate and interpretable results. Here are the main assumptions of
+        linear regression:
+        <br />
+        1. <b>Linearity:</b> This is the most fundamental assumption, stating
+        that the relationship between the independent (predictor) and dependent
+        (response) variables is linear and straight. In simpler terms, there's a
+        straight line that best fits the data points. Deviations from linearity
+        can lead to biased estimates and unreliable interpretations.
+        <br />
+        2. <b>No Multicollinearity:</b> This means the independent variables in
+        your model should not be highly correlated with each other. Imagine two
+        variables providing almost the same information; it becomes tricky to
+        disentangle their individual effects on the dependent variable.
+        Multicollinearity can inflate standard errors and distort coefficient
+        estimates.
+        <br />
+        3. <b>Homoscedasticity:</b> This assumption demands that the variance of
+        the errors (residuals) around the regression line should be constant
+        across all values of the independent variables. In other words, the
+        "scatter" of the data points around the line shouldn't increase or
+        decrease significantly with changes in the predictor variable.
+        Violations of this assumption can affect the accuracy of hypothesis
+        testing.
+        <br />
+        4. <b>Normality of Residuals:</b> Ideally, the errors (differences
+        between predicted and actual values) should follow a normal
+        distribution. This ensures that the model's predictions are
+        statistically reliable. While not entirely strict, significant
+        deviations from normality can impact the validity of inferences drawn
+        from the model.
+        <br />
+        5. <b>Independence of Errors:</b> This assumption states that the errors
+        associated with each observation are independent of each other. In other
+        words, the error for one data point shouldn't influence the error for
+        any other point. Dependence between errors can lead to inaccurate
+        estimates of the model's variance and affect hypothesis testing.
+        <br />
+        6. <b>No Autocorrelation:</b> This assumption applies to time series
+        data and demands that the errors for consecutive observations are not
+        correlated. In simpler terms, the error at one time point shouldn't be
+        "predictable" from the errors at previous time points. Autocorrelation
+        can distort estimates of model parameters and affect the reliability of
+        forecasts.
+      </p>
+    </div>
+  </body>
+</html>
