@@ -16,7 +16,7 @@ body {
 
 a {
     text-decoration: underline;
-    color: inherit;
+    color: red;
 }
 
 a:visited {
@@ -24,7 +24,6 @@ a:visited {
   }
 
 a:hover {
-    color: red;
     font-weight: bold;
 }
 
