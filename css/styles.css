@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url(https://fonts.bunny.net/css?family=fira-sans:400,700);
+@import url(https://fonts.bunny.net/css?family=anton:400|fira-sans:400,700);
 
 
 body {
-    background-color: #FDF7E4;
+    background-color: #FEFBF6;
     font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,17 +12,20 @@ body {
       background-color: #25292E;
       color: #fff;
     }
+}
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: inherit;
 }
+
 a:visited {
-    color: inherit; /* Inherit color from parent element */
+    text-decoration: none;
   }
 
 a:hover {
     color: red;
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .heading {
@@ -36,18 +37,17 @@ a:hover {
 }
 
 .comfort {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: 48px;
+    font-size: 60px;
 }
 
 .linkref {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
