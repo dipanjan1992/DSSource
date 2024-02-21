@@ -25,21 +25,35 @@
       Multicollinearity occurs when two or more independent variables in a
       regression model are highly correlated with each other. This means that
       they share a lot of information, and it becomes difficult to isolate the
-      individual effect of each variable on the dependent variable.
+      individual effect of each variable on the dependent variable. Multicollinearity is like having two or more
+      features in your data that are strongly related to each other. It's like having redundant information. Imagine
+      you're trying to predict someone's height based on their weight, but you also have their height in centimeters and
+      inches. These two height measurements are essentially saying the same thing, just in different units. When you
+      have multicollinearity, it can mess up statistical models because they get confused about which feature is
+      actually influencing the outcome. It's like having two friends who always show up together to events - you can't
+      really tell who's influencing whom. In statistical terms, multicollinearity can make it hard to figure out the
+      true relationship between each feature and the outcome you're trying to predict.
     </p>
-    <h2>How does VIF work?</h2>
+    <h2>How is VIF</h2>
     <p>
-      The VIF score for a particular independent variable is calculated by
-      regressing that variable on all the other independent variables in the
-      model. The VIF score is then equal to the reciprocal of 1 minus the
-      R-squared value of this regression. In simpler terms, it tells you how
-      much the variance of the coefficient estimate for that variable is
-      inflated due to multicollinearity.
-      <b>Higher VIF scores indicate a greater degree of multicollinearity</b>.
-      While there is no universally accepted threshold for what constitutes a
-      "high" VIF score, a common rule of thumb is that values above 5 or 10
-      suggest potential problems.
+      VIF stands for Variance Inflation Factor. It's a measure used to detect multicollinearity in regression analysis.
     </p>
+    <p>Here's a simple explanation:</p>
+    <p>
+      When you're doing regression analysis, you're trying to see how different factors (like age, income, education)
+      affect an outcome (like happiness). Multicollinearity happens when some of these factors are strongly related to
+      each other.
+    </p>
+    <p>VIF helps you detect this. It measures how much the variance (or uncertainty) of the estimated coefficient of a
+      variable increases if you add more variables into the model. So, if a variable has a high VIF, it means that it's
+      likely correlated with other variables in the model, which
+      can mess up your analysis.
+    </p>
+    <p>In simpler terms, VIF tells you if your variables are "friends" that always show up together, making it harder to
+      figure out who's really influencing the outcome. If VIF is too high, you might need to remove one of the variables
+      or find a way to deal with the multicollinearity.
+    </p>
+
     <h2>Why is VIF important?</h2>
     <p>
       Multicollinearity can lead to several problems in regression analysis,
@@ -166,6 +180,100 @@
         Popular regression algorithms include linear regression, polynomial regression, and random forest regression.
       </li>
     </ul>
+    <h2>What are the various measures of central tendancy and state their purpose?</h2>
+    <p>Measures of central tendency are statistical tools used to summarize a set of data with a single value that
+      represents its "center" or "typical" value. These measures help us understand where the majority of data points
+      lie within the distribution. Here are the three main ones and their purposes:</p>
+    <p><b>1. Mean:</b></p>
+    <ul>
+      <li><b>Calculation:</b> Sum of all values divided by the number of values.</li>
+      <li><b>Purpose:</b> Represents the "average" value in the data. Suitable for symmetrical distributions where
+        extreme values are uncommon.</li>
+      <li><b>Limitation:</b> Sensitive to ourliers (extreme values) that can pull the mean away form the majority of
+        data points.</li>
+
+    </ul>
+    <p><b>2. Median:</b></p>
+    <ul>
+      <li><b>Calculation:</b> Middle value when the data is arranged in ascending/descending order.</li>
+      <li><b>Purpose:</b> Represents the "middle" value, unaffected by outliers. Useful for skewed distributions or when
+        dealing with ordinal data.</li>
+      <li><b>Limitation:</b> May not be as intuitive as the mean for some audiences.</li>
+    </ul>
+    <p><b>3. Mode:</b></p>
+    <ul>
+      <li><b>Calculation:</b> Most frequent value in the data.</li>
+      <li><b>Purpose: </b>Represents the most common value, useful for identifying typical categories. Can highlight
+        multiple peaks in multimodal distributions.</li>
+      <li><b>Limitation: </b>Doesn't nucessarily reflect the center of the data, especially in distributions with
+        multiple modes or no clear dominant value.</li>
+    </ul>
+    <p>Choosing the appropriate measure depends on the characteristics of your data:</p>
+    <ul>
+      <li><b>Symmetrical vs. Skewed distributions: </b>Mean is preferred for symmetrical distributions, while median is
+        better for skewed ones.</li>
+      <li><b>Presence of outliers: </b>Median is less sensitive to outliers, making it a better choice when extreme
+        values exist.</li>
+      <li><b>Data type: </b>Mean works well with numerical data, while both median and mode can be used with ordinal or
+        categorical data.</li>
+    </ul>
+    <h2>What is hypothesis testing in statistics with example?</h2>
+    <p>Hypothesis testing is a statistical method used to determine if there is enough evidence in a sample data to draw
+      conclusions about a population. It involves formulating two competing hypotheses, the null hypothesis (H0) and the
+      alternative hypothesis (Ha), and then collecting data to assess the evidence. An example: testing if a new drug
+      improves patient recovery (Ha) compared to the standard treatment (H0) based on collected patient data.</p>
+    <h2>What is hypothesis testing and its types?</h2>
+    <p>Hypothesis testing is a statistical method used to make inferences about a population based on sample data. It
+      involves formulating two hypotheses: the null hypothesis (H0), which represents the default assumption, and the
+      alternative hypothesis (Ha), which contradicts H0. The goal is to assess the evidence and determine whether there
+      is enough statistical significance to reject the null hypothesis in favor of the alternative hypothesis.</p>
+    <p>Types of hypothesis testing:</p>
+    <ol>
+      <li>One-sample test: Used to compare a sample to a known value or a hypothesized value.</li>
+      <li>Two-sample test: Compares two independent samples to assess if there is a significant difference between their
+        means or distributions.</li>
+      <li>Paired-sample test: Compares two related samples, such as pre-test and post-test data, to evaluate changes
+        within the same subjects over time or under different conditions.</li>
+      <li>Chi-square test: Used to analyze categorical data and determine if there is a significant association between
+        variables.</li>
+      <li>ANOVA (Analysis of Variance): Compares means across multiple groups to check if there is a significant
+        difference between them.</li>
+    </ol>
+    <h2>What are the steps of hypothesis testing?</h2>
+    <p>The steps of hypothesis testing are as follows:</p>
+    <ol>
+      <li>Formulate the hypotheses: State the null hypothesis (H0) and the alternative hypothesis (Ha) based on the
+        research question.</li>
+      <li>Set the significance level: Determine the acceptable level of error (alpha) for making a decision.</li>
+      <li>Collect and analyze data: Gather and process the sample data.</li>
+      <li>Compute test statistic: Calculate the appropriate statistical test to assess the evidence.</li>
+      <li>Make a decision: Compare the test statistic with critical values or p-values and determine whether to reject
+        H0 in favor of Ha or not.</li>
+      <li>Draw conclusions: Interpret the results and communicate the findings in the context of the research question.
+      </li>
+    </ol>
+    <h2>What are the 2 types of hypothesis testing?</h2>
+    <ol>
+      <li>One-tailed (or one-sided) test: Tests for the significance of an effect in only one direction, either positive
+        or negative.</li>
+      <li>Two-tailed (or two-sided) test: Tests for the significance of an effect in both directions, allowing for the
+        possibility of a positive or negative effect.</li>
+      <p>The choice between one-tailed and two-tailed tests depends on the specific research question and the
+        directionality of the expected effect.</p>
+    </ol>
+    <h2>What are the 3 major types of hypothesis?</h2>
+    <ol>
+      <li>Null Hypothesis (H0): Represents the default assumption, stating that there is no significant effect or
+        relationship in the data.</li>
+      <li>Alternative Hypothesis (Ha): Contradicts the null hypothesis and proposes a specific effect or relationship
+        that researchers want to investigate.</li>
+      <li>Nondirectional Hypothesis: An alternative hypothesis that doesn't specify the direction of the effect, leaving
+        it open for both positive and negative possibilities.</li>
+    </ol>
+    <h2>What test do we use for hypothesis testing?</h2>
+    <h2>What is the purpose of logistic regression?</h2>
+    <h2>What is recall, precision?</h2>
+    <h2>What is confusion matrix?</h2>
   </div>
 </body>
 
